@@ -105,7 +105,7 @@ function Home(props) {
           >
             <Box p={2} width="250px" textAlign="center" role="presentation">
               <div className="text-color-select">
-                <p className="text">Text Color</p>
+                <p className="text">Adjust Text Color</p>
                 {colors.map((color, idx) => {
                   return (
                     <span
@@ -132,7 +132,7 @@ function Home(props) {
               </div>
 
               <div className="background-color-select">
-                <p className="text">Background Color</p>
+                <p className="text">Adjust Background Color</p>
                 {colors.map((color, idx) => {
                   return (
                     <span
@@ -159,7 +159,7 @@ function Home(props) {
               </div>
 
               <div className="title-color-select">
-                <p className="text">Title Color</p>
+                <p className="text">Adjust Title Color</p>
                 {colors.map((color, idx) => {
                   return (
                     <span
