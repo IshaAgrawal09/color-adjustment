@@ -1,24 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Home from "./Home";
+import { useState } from "react";
 
 function App() {
+  const [textColor, setTextColor] = useState("");
+  const [bgColor, setBgColor] = useState("");
+  const [titleColor, setTitleColor] = useState("");
+  const [contrast, setContrast] = useState("");
+
+  function handleTextColor(event, color) {
+    console.log(color);
+    setTextColor(color);
+    setTitleColor("");
+  }
+
+  function handleBgColor(event, color) {
+    console.log(color);
+    setBgColor(color);
+  }
+
+  function handleTitleColor(event, color) {
+    console.log(color);
+    setTitleColor(color);
+  }
+
+  function handleContrast(event, contrast) {
+    console.log("contrast");
+    setContrast(contrast);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Home
+      textColor={textColor}
+      setTextColor={setTextColor}
+      handleTextColor={handleTextColor}
+      handleBgColor={handleBgColor}
+      bgColor={bgColor}
+      setBgColor={setBgColor}
+      titleColor={titleColor}
+      setTitleColor={setTitleColor}
+      handleTitleColor={handleTitleColor}
+      contrast={contrast}
+      setContrast={setContrast}
+      handleContrast={handleContrast}
+    />
   );
 }
 

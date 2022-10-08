@@ -1,38 +1,104 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main {
+  border: 1px solid #808080;
+  padding: 2%;
+  border-radius: 7px;
+}
+
+p,
+h2 {
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+.remove {
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 1.3%;
+  margin: 2% 0;
+}
+.section1 {
+  width: 80%;
+  margin: 0 auto 2%;
+}
+
+.child {
+  margin-bottom: 2em;
+}
+.text {
+  font-style: italic;
+}
+.accessiblity-tool {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.accessiblity-tool a {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #063f5f;
+  color: #fff;
+  display: block;
+  width: 50px;
+  height: 50px;
+  font-size: 45px;
+  border-radius: 50%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+[class*="color-select"] {
+  margin-bottom: 1em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+[class*="color-select"] span {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  display: inline-block;
+  border: 1px solid #e3e3e3;
+  cursor: pointer;
+  -webkit-user-select: initial;
+  user-select: initial;
+  border-radius: 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+[class*="color-select"] span:focus {
+  border: 10px solid #e3e3e3;
+  border-radius: 50%;
+}
+
+[class*="color-select"] .active {
+  border: 2px solid #000;
+  border-radius: 50%;
+  padding: 5px;
+  outline: 2px;
+}
+
+.contrast-select {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 0.5em;
 }
 
-.App-link {
-  color: #61dafb;
+.contrast-select > div {
+  margin-left: 4%;
+  flex: 0 0 28%;
+  border: 1px solid #e3e3e3;
+  padding: 0.5em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contrast-icon {
+  cursor: pointer;
+  margin-bottom: 0.5em;
+}
+
+.contrast-select > div.active {
+  border: 2px solid #000;
 }
